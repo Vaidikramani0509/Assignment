@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'poppins', sans-serif;
+  ;
 }
 
 body {
@@ -49,6 +50,7 @@ body {
     justify-content: center;
     font-size: 25px;
     font-weight: 600;
+    top: -30px;
     text-decoration: none;
     color: #fff;
     cursor: default;
@@ -67,7 +69,7 @@ body {
     letter-spacing: 1px;
     text-decoration: none;
     color: white;
-    background: #0ef;
+    background: transparent;
     border: 3px solid #999999;
     cursor: pointer;
     transition: ease-out 0.5s;
@@ -97,7 +99,7 @@ body {
 
 
 #navbar ul li a:hover {
-    background: #0ef;
+    background: transparent;
     color: #081b29;
     box-shadow: 0 0 20px rgb(255, 255, 255);
 }
@@ -142,13 +144,15 @@ body {
     border-color: white;
 
 }
-
+.paragraph{
+    background-color: transparent   ;
+}
 .home {
     position: relative;
     width: 100%;
     justify-content: space-between;
     height: 100vh;
-    background: url(wallpaper.jpg) no-repeat;
+    background-color: black;
     background-size: cover;
     background-position: center;
     display: flex;
@@ -158,20 +162,24 @@ body {
 
 .home-content {
     max-width: 600px;
-
+    
 }
 
-.home-content h3 {
+.home .home-content h3 {
     position: relative;
+    color: green;
+    /* background-color: transparent; */
+    border: 2px solid #0ef;
+    margin: 4px 4px;
+    padding: 8px 21px;
+    text-align: justify;
+    height: 50px;
+    width: 250px;
+    margin-top: -135px;
     font-size: 30px;
-    top: 50%;
-    left: 50%;
+    left: 442px;    
     animation: slideBottom 1s ease forwards;
     animation-delay: .6s;
-}
-
-.home-content h3:nth-last-of-type(2) {
-    margin-bottom: 30px;
 }
 
 .home-content h3 span {
@@ -195,9 +203,11 @@ body {
 }
 
 .home-sci a {
-    display: inline-flex;
+    display:flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    top: 70%;
     width: 40px;
     height: 40px;
     background: transparent;
@@ -206,7 +216,7 @@ body {
     font-size: 20px;
     color: #0ef;
     text-decoration: none;
-    margin: 30px 15px 30px 0;
+    margin-bottom: 30px 15px 30px 0;
 }
 
 .home-sci a:hover {
