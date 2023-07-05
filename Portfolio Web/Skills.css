@@ -1,0 +1,154 @@
+body {
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    height: 100vh;
+    background: url(wallpaper.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 70px 10% 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'ubuntu', sans-serif;
+}
+
+.head {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: 0.3s;
+
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 40px;
+}
+
+.head #navbar ul li {
+    margin: 4px, 4px;
+    padding: 4px;
+    /* background-color: green; */
+    width: 500px;
+    height: 110px;
+    /* overflow-x: hidden; */
+    /* overflow-y: auto; */
+    text-align: justify;
+    display: inline;
+}
+
+.head #navbar .about {
+    font-size: 50px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+
+#navbar ul li a {
+    position: relative;
+    display: inline-block;
+    margin: 15px;
+    padding: 12px 27px;
+    text-align: center;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #3ef;
+    background-color: transparent;
+    border: 3px solid #3ef;
+    cursor: pointer;
+    transition: ease-out 0.5s;
+    -webkit-transition: ease-out 0.5s;
+    -moz-transition: ease-out 0.5s;
+}
+
+#navbar ul li a:hover {
+    background: transparent;
+    color: #008df3;
+    box-shadow: 0 0 20px rgb(255, 255, 255);
+}
+
+.head #navbar ul li a::after,
+.head #navbar ul li a::before {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    transition: .5s;
+}
+
+.head #navbar ul li a::after {
+    top: -9px;
+    left: -9px;
+    border-top: 3px solid transparent;
+    border-left: 3px solid transparent;
+}
+
+.head #navbar ul li a::before {
+    bottom: -9px;
+    right: -9px;
+    border-bottom: 3px solid transparent;
+    border-right: 3px solid transparent;
+}
+
+.head #navbar ul li a:hover {
+    color: white;
+}
+
+.head #navbar ul li a:hover::after,
+.head #navbar ul li a:hover::before {
+    width: calc(100% + 15px);
+    height: calc(100% + 15px);
+    border-color: white;
+
+}
+
+.row {
+    margin: 13px 287px;
+}
+
+.row,
+.row>.column {
+    padding: 8px;
+}
+
+.column {
+    float: left;
+    width: 33.33%;
+    display: block;
+
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Content */
+.content {
+    background-color: white;
+    padding: 10px;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+    display: block;
+}

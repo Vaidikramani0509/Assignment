@@ -1,0 +1,248 @@
+.head {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: 0.3s;
+
+}
+
+.head #navbar ul li {
+    margin: 4px, 4px;
+    padding: 4px;
+    width: 500px;
+    height: 110px;
+    text-align: justify;
+    display: inline;
+}
+
+.head #navbar .about {
+    font-size: 50px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+
+#navbar ul li a {
+    position: relative;
+    display: inline-block;
+    margin: 15px;
+    padding: 12px 27px;
+    text-align: center;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #3ef;
+    background-color: transparent;
+    border: 3px solid #3ef;
+    cursor: pointer;
+    transition: ease-out 0.5s;
+    -webkit-transition: ease-out 0.5s;
+    -moz-transition: ease-out 0.5s;
+}
+
+#navbar ul li a:hover {
+    background: transparent;
+    color: #008df3;
+    box-shadow: 0 0 20px rgb(255, 255, 255);
+}
+
+.head #navbar ul li a::after,
+.head #navbar ul li a::before {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    transition: .5s;
+}
+
+.head #navbar ul li a::after {
+    top: -9px;
+    left: -9px;
+    border-top: 3px solid transparent;
+    border-left: 3px solid transparent;
+}
+
+.head #navbar ul li a::before {
+    bottom: -9px;
+    right: -9px;
+    border-bottom: 3px solid transparent;
+    border-right: 3px solid transparent;
+}
+
+.head #navbar ul li a:hover {
+    color: white;
+}
+
+.head #navbar ul li a:hover::after,
+.head #navbar ul li a:hover::before {
+    width: calc(100% + 15px);
+    height: calc(100% + 15px);
+    border-color: white;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'ubuntu', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(wallpaper.jpg);
+    /* position: relative; */
+    /* width: 100%; */
+    justify-content: space-between;
+    /* height: 100vh; */
+    background: url(wallpaper.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 70px 35% 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 40px;
+}
+
+.card {
+    position: relative;
+    width: 320px;
+    height: 450px;
+    margin: 30px;
+    background: #287bff;
+    border-radius: 20px;
+    border-bottom-left-radius: 160px;
+    border-bottom-right-radius: 160px;
+    box-shadow: 0 15px 0 #fff,
+        inset 0 -15px 0 rgba(255, 255, 255, 0.25),
+        0 45px 0 rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: -140px;
+    left: -40%;
+    width: 100%;
+    height: 120%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2));
+    transform: rotate(35deg);
+    pointer-events: none;
+    filter: blur(5px);
+}
+
+.card:nth-child(1) {
+    background: linear-gradient(to bottom, #ff2ae0, #645bf6);
+}
+
+.card:nth-child(2) {
+    background: linear-gradient(to bottom, #ffec61, #f321d7);
+}
+
+.card:nth-child(3) {
+    background: linear-gradient(to bottom, #24ff72, #9a4eff);
+}
+
+.icon {
+    position: relative;
+    width: 140px;
+    height: 120px;
+    background: #3c2846;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    box-shadow: 0 10px 0 rgba(0, 0, 0, 0.1),
+        inset 0 -8px 0 #fff;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+}
+
+.icon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50px;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border-top-right-radius: 50px;
+    box-shadow: 15px -15px 0 15px #3c2846;
+}
+
+.icon::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -50px;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border-top-left-radius: 50px;
+    box-shadow: -15px -15px 0 15px #3c2846;
+}
+
+.icon ion-icon {
+    color: #fff;
+    position: relative;
+    font-size: 6em;
+    z-index: 10000;
+    --ionicon-stroke-width: 24px;
+}
+
+.content {
+    position: absolute;
+    width: 100%;
+    padding: 30px;
+    padding-top: 140px;
+    text-align: center;
+}
+
+.content h2 {
+    font-size: 1.75em;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.content p {
+    color: #fff;
+    line-height: 1.5em;
+}
+
+.btn-box {
+    position: relative;
+    top: 40px;
+    left: -3px;
+    padding: 12px 28px;
+    background: #0ef;
+    border-radius: 55px;
+    font-size: 18px;
+    color: #081b29;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.btn-box:hover {
+    box-shadow: 0 0 50px rgb(255, 255, 255)
+}
